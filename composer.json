@@ -1,6 +1,6 @@
 {
     "name": "flying/css-classes",
-    "description": "Simple helper class to construct CSS classes list",
+    "description": "CSS classes list manipulation library",
     "type": "library",
     "license": "MIT",
     "authors": [

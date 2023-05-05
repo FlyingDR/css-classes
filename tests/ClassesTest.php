@@ -55,7 +55,7 @@ class ClassesTest extends TestCase
             ],
             // Test passing invalid values
             [
-                [null, true, false, 42, 1.2345, [], new \stdClass()],
+                [null, true, false, 42, 1.2345, [], new \stdClass(), fn() => 'some-class'],
                 '',
             ],
             // Test passing nested values

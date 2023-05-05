@@ -197,28 +197,28 @@ class ClassesTest extends TestCase
         $classes = Classes::from('a b c');
 
         $one = $classes->with('x');
-        $this->assertNotEquals($classes, $one);
+        $this->assertNotSame($classes, $one);
         $this->assertEquals('a b c', $classes);
         $this->assertEquals('a b c x', $one);
 
         $two = $classes->without('a');
-        $this->assertNotEquals($classes, $two);
-        $this->assertNotEquals($one, $two);
+        $this->assertNotSame($classes, $two);
+        $this->assertNotSame($one, $two);
         $this->assertEquals('a b c', $classes);
         $this->assertEquals('b c', $two);
 
         $three = $classes->filter(fn(string $class): bool => $class === 'a');
-        $this->assertNotEquals($classes, $three);
-        $this->assertNotEquals($one, $three);
-        $this->assertNotEquals($two, $three);
+        $this->assertNotSame($classes, $three);
+        $this->assertNotSame($one, $three);
+        $this->assertNotSame($two, $three);
         $this->assertEquals('a b c', $classes);
         $this->assertEquals('a', $three);
 
         $four = $classes->clear();
-        $this->assertNotEquals($classes, $four);
-        $this->assertNotEquals($one, $four);
-        $this->assertNotEquals($two, $four);
-        $this->assertNotEquals($three, $four);
+        $this->assertNotSame($classes, $four);
+        $this->assertNotSame($one, $four);
+        $this->assertNotSame($two, $four);
+        $this->assertNotSame($three, $four);
         $this->assertEquals('a b c', $classes);
         $this->assertEquals('', $four);
     }

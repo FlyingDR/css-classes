@@ -6,6 +6,7 @@ namespace Flying\Util\Css\Tests;
 
 use Flying\Util\Css\Classes;
 use PHPUnit\Framework\TestCase;
+use function Flying\Util\Css\classes;
 
 class ClassesTest extends TestCase
 {
@@ -23,6 +24,7 @@ class ClassesTest extends TestCase
         $this->assertEquals($expected, new Classes(...$args));
         $this->assertEquals($expected, Classes::from(...$args));
         $this->assertEquals($expected, (new Classes())->with(...$args));
+        $this->assertEquals($expected, classes(...$args));
     }
 
     public function dpPassingDifferentValues(): array

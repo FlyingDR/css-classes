@@ -67,6 +67,12 @@ Classes list can be exported as a plain array using `toArray()` method. Also cla
 
 It is also possible to check if given class is available in list by using `has(string $class)` method.
 
+### Standalone `classes()` function
+
+For simple cases when it is only need to create CSS classes list as a string from available data it is also possible to use `\Flying\Util\Css\classes()` function.
+
+`classes()` function is available since v1.1.0
+
 ## Usage in Twig
 
 Library includes `\Flying\Util\Css\Twig\ClassesExtension` Twig extension that exposes `classes` function that provides same functionality as a [main class](#standalone-usage).

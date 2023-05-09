@@ -69,9 +69,19 @@ It is also possible to check if given class is available in list by using `has(s
 
 ## Usage in Twig
 
-Library includes `\Flying\Util\Css\Twig\ClassesExtension` Twig extension that exposes `classes` function that exposes same functionality as a [main class](#standalone-usage).
+Library includes `\Flying\Util\Css\Twig\ClassesExtension` Twig extension that exposes `classes` function that provides same functionality as a [main class](#standalone-usage).
 
-Example: 
+It can be used as a simple construction of the classes list:  
+
+```twig
+{%- set category = 'some-category' -%}
+{%- set active = true -%}
+{%- set current = false -%}
+{# "main-class some-category is-active" will be generated #}
+<div class="{{ classes('main-class', category, active ? 'is-active': null, current ? 'is-current' : null) }}"></div>
+```
+
+But it is also possible to use CSS classes list modification methods:
 
 ```twig
 {%- set categories = {foo: 'Foo', bar: 'Bar'} -%}

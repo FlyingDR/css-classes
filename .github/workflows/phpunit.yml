@@ -27,7 +27,7 @@ jobs:
 
         steps:
             -   name: Checkout
-                uses: actions/checkout@v3
+                uses: actions/checkout@v4
 
             -   name: Install PHP with extensions
                 uses: shivammathur/setup-php@v2
@@ -48,7 +48,7 @@ jobs:
 
         steps:
             -   name: Checkout
-                uses: actions/checkout@v3
+                uses: actions/checkout@v4
 
             -   name: Install PHP with extensions
                 uses: shivammathur/setup-php@v2
@@ -64,6 +64,6 @@ jobs:
                 run: ./vendor/bin/phpunit --coverage-clover=coverage.xml
 
             -   name: Send code coverage report to Codecov.io
-                uses: codecov/codecov-action@v3
+                uses: codecov/codecov-action@v4
                 with:
                     token: ${{ secrets.CODECOV_TOKEN }}
